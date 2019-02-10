@@ -1,0 +1,79 @@
+﻿  <Page
+    x:Class="StudyBot.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StudyBot"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <DataTemplate x:Key="MessagesListDataTemplate">
+            <Grid x:Name="TextB" Background="White" VerticalAlignment="Center" Margin="5, 5, 5, 5">
+                <Border>
+                    <TextBlock Text="{Binding Text}" TextWrapping="Wrap" MaxWidth="500"/>
+                </Border>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Stretch">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.3*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.9*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border Background="#2f5cb6"/>
+        <Border Grid.Column ="1" Background="#1f3d7a"/>
+        <Border Grid.Row="1" Grid.ColumnSpan="2" Background="#152951"/>
+
+        <StackPanel Grid.Column="1" >
+            <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" HorizontalAlignment="Center" Height="380" Width="900" Padding ="10" Margin="20,25,15,0" VerticalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="300*"/>
+                    <RowDefinition Height="70*"/>
+                    <RowDefinition Height="70*"/>
+                </Grid.RowDefinitions>
+                <ListView x:Name="MessagesList" Grid.Row="1" ItemTemplate="{StaticResource MessagesListDataTemplate}" Margin="5, 5, 5, 15"/>
+                <TextBox x:Name="NewMessageTextBox" Grid.Row="2" BorderBrush="DarkGray" BorderThickness="5" Foreground="#2f5cb6" KeyUp="NewMessageTextBox_KeyUp" VerticalAlignment="Center" Margin="5, 5, 5, 5" Padding="5, 5, 5, 5"/>
+                <Button x:Name="SendButton" Content="SEND" Background="DarkGray" BorderBrush="Transparent" BorderThickness="5" Foreground="#fff" Margin="5, 5, 5, 5" HorizontalAlignment="Left" VerticalAlignment="Center" Click="Button_Send" Grid.Row="3" />
+                
+           </Grid>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20,20,20,20">
+            <Pivot x:Name="rootPivot" HorizontalAlignment="Center" VerticalAlignment="Top" Height="Auto" Width="1150">
+                <Pivot.HeaderTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <TextBlock Text="{Binding}" Foreground="White" />
+                        </Grid>
+                    </DataTemplate>
+                </Pivot.HeaderTemplate>
+
+                <Pivot.RightHeader>
+                    <CommandBar ClosedDisplayMode="Hidden" >
+                        <AppBarButton Icon="Back" Label="Previous" Click="BackButton_Click" />
+                        <AppBarButton Icon="Forward" Label="Next" Click="NextButton_Click" />
+                    </CommandBar>
+                </Pivot.RightHeader>
+                <PivotItem Header="Encyclopedia">
+                    <WebView x:Name="Encyclopedia" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="1150" MinHeight="500" UseLayoutRounding="False" d:LayoutRounding="Auto" >
+                    </WebView>
+                </PivotItem>
+                <PivotItem Header="Microsoft Academic">
+                    <WebView x:Name="MicrosoftAcademic" Width="1150" HorizontalAlignment="Center" VerticalAlignment="Stretch" LoadCompleted="Journals_LoadCompleted" MinHeight="500" UseLayoutRounding="False" d:LayoutRounding="Auto" />
+                </PivotItem>
+                <PivotItem Header="News / Blogs">
+                    <WebView x:Name="NewsBlogs" Width="1150" HorizontalAlignment="Center" VerticalAlignment="Stretch" MinHeight="500" UseLayoutRounding="False" d:LayoutRounding="Auto" />
+                </PivotItem>
+            </Pivot>
+        </StackPanel>
+        <Image Width="160" Source="Assets/robot-face.png" HorizontalAlignment="Center" Margin="15,60,10,10" VerticalAlignment="Center" Height="160" />
+        <TextBlock Foreground="White" FontSize="38" HorizontalAlignment="Center" Margin="15,70,10,10" Text="Study Bot"/>
+    </Grid>
+</Page>

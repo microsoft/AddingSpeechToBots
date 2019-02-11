@@ -89,6 +89,23 @@
                 webSpeechPonyfillFactory
             }, webchat);
 
+        // Web Chat only sends ConversationUpdate after the first message is sent.
+        // So this event is only sent to force ConversationUpdate to be set. (Our bot doesn't do anything with it)
+        connection.postActivity({
+            type: 'event',
+            name: 'greetings',
+            text: 'greetings',
+            value: 'greetings',
+            from: user,
+        }).subscribe();
+
+        // keep input focused inside the bot entry field
+        const field = document.forms[0][0];
+        const focus = _ => (window.getSelection().type != "Range") && (field.focus() && window.getSelection().empty());
+        focus();
+        // focusing periodically turns out to be the most robust method of keeping the input field focused
+        setInterval(focus, 250);
+
         })();
     </script>
 </body>

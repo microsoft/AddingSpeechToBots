@@ -32,7 +32,7 @@ The second scenario is based on the [Study Bot](https://github.com/Azure-Samples
 ## Tutorial Steps
 Work through the following README files:
 
-1. [JFK Hoover Bot]()
+1. [JFK Hoover Bot](./JFK-Example/README.md)
 
 1. [Study Bot](./Study-bot-example/README.md)
 

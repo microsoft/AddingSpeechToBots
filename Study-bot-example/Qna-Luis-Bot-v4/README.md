@@ -1,9 +1,6 @@
 # Create your Bot
 
-In this section you will create the bot used for the Study Bot application. 
-
-
-In this tutorial you will use the [Microsoft Bot Framework](https://dev.botframework.com). We will also highlight how to hanlde multiple knowledge bases by using [Dispatch](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-tutorial-dispatch?view=azure-bot-service-4.0&tabs=csharp) to "dispatch" user queries in a chat client to the right Microsoft Cognitive Service. Dispatch will direct the user to [LUIS](https://luis.ai), which then directs the user to the right QnA Maker knowledge bases (FAQs) stored in [qnamaker.ai](https://www.qnamaker.ai/). 
+In this section you will create the bot used for the Study Bot application using the [Microsoft Bot Framework](https://dev.botframework.com). We will also highlight how to hanlde multiple knowledge bases by using [Dispatch](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-tutorial-dispatch?view=azure-bot-service-4.0&tabs=csharp) to "dispatch" user queries in a chat client to the right Microsoft Cognitive Service. Dispatch will direct the user to [LUIS](https://luis.ai), which then directs the user to the right QnA Maker knowledge bases stored in [qnamaker.ai](https://www.qnamaker.ai/). 
 
 The  QnA Maker [Chitchat](https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/how-to/chit-chat-knowledge-base) feature is used as one of the knowledge bases and is integrated into LUIS using the CLI Dispatch tool. Chitchat gives the chat client a more natural, conversational feel when a user chats off-topic, asking questions such as "How are you?", "You're boring", or "Can we be friends?". There are three different personalities you can set Chitchat to when creating it in [qnamaker.ai](https://www.qnamaker.ai/): The Professional, The Friend, or The Comic. This sample uses The Comic setting, since the Study Bot targets high school students.
 
@@ -18,11 +15,11 @@ The  QnA Maker [Chitchat](https://docs.microsoft.com/en-us/azure/cognitive-servi
 
     <img src="../../Assets/bot-secret-location.png">
 
-1. Download your bot code locally once it has been created. To do this go to the Build section of the Bot management menu.
+1. After your bot deployes, download your bot code locally. To do this go to the Build section of the Bot management menu.
 
     <img src="../../Assets/download-bot-code.png">
 
-1. Downlaod the code, extract all the files and open the solution file in Visual Studio.
+1. Extract all the files and open the solution file in Visual Studio.
 
 
 1. Update the `appsettings.json` file in the root of the bot project with the botFilePath and botFileSecret. 
@@ -47,7 +44,7 @@ The  QnA Maker [Chitchat](https://docs.microsoft.com/en-us/azure/cognitive-servi
 
 1. Deploy a QnA Maker Service in [qnamaker.ai](https://www.qnamaker.ai). When you deploy your QnA Maker service, be sure to choose a 'B' search tier or higher since we will deploy more than 3 search indexes. [Additional Documentation](https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/quickstarts/create-publish-knowledge-base)
 
-    <img src="../../Assets/QnAMakerService.jpg">
+    <img src="../../Assets/QnAMakerService.JPG">
 
 1. After the QnA Maker service has been deployed, copy the key into the QnA Maker key section in the `StudyBotTemplate.txt` file. Also note the `region` you chose in the file. You will need these values later
 
@@ -75,7 +72,7 @@ The  QnA Maker [Chitchat](https://docs.microsoft.com/en-us/azure/cognitive-servi
     
 
 
-    <img src="../../Assets/QnAMakerEndpoints.jpg">
+    <img src="../../Assets/QnAMakerEndpoints.JPG">
 
  
 ### LUIS
@@ -93,7 +90,7 @@ Find the LUIS authoring key in the "Setttings" menu on the drop down menu when y
         node --version
     ```
 
-1. From a command prompt/terminal navigate to your bot project folder and type the command:
+1. Install the bot-builder tools. In a command prompt/terminal navigate to your bot project folder and type the command:
     ```cmd
     npm i -g msbot chatdown ludown qnamaker luis-apis botdispatch luisgen
     ```
@@ -102,7 +99,7 @@ The MSBot tool is a command line tool to create and manage bot resources describ
 
 1. Connect QnA Services
     
-    We need to connect the bot to all of the QnA Knowledge bases (KB) that you just created. We also want to remove the initial Luis service which was created when you deployed the bot. 
+    We need to connect the bot to all of the QnA Knowledge bases (KB) that you just created.  
 
     For each QnA Maker knowledge base you created, run the following command. You should have copied the info for each parameter into the StudyBotTemplate.txt file earlier
 
@@ -110,7 +107,7 @@ The MSBot tool is a command line tool to create and manage bot resources describ
     msbot connect qna --secret <bot secret>  --name <name of the KB> --kbId <Knowledgebase ID> --subscriptionKey <QnA Maker Service key> --endpointKey <QnA Maker endpoint key> --hostname <hostname url> 
     ```
 
-1. Remove origional LUIS service that was deployed by the web app bot template
+1. We also want to remove the initial Luis service which was created when you deployed the bot. To do this run the following command:
 
     ```cmd
     msbot disconnect BasicBotLuisApplication --secret <Bot Secret>

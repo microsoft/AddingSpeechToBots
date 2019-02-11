@@ -37,7 +37,7 @@ The Hoover Bot uses four of Microsoft's Azure Cognitive Services.
 
 ## In this workshop
 
-In this workshop, you will be building your own version of the Hoover. we will walk through deploying the Bot, Text Analytics and the steps needed to incorporate speech recognition and synthesis. We will first use the default voice and language model, and then build and use a custom voice and model.
+In this workshop, you will build your own version of the Hoover bot. we will walk through deploying the Bot, Text Analytics and the steps needed to incorporate speech recognition and synthesis. We will first use the default voice and language model, and then build and use a custom voice and model.
 
 The Azure Search instance and the custom speech and voice models take a long time to build, since they are crunching a lot of data, so we have set up these services in advance. All participants will use the same Azure Search and Speech Service instances.
 
@@ -59,7 +59,9 @@ To create the bot, you first create a Bot Service resource in your Azure dashboa
 The Hoover bot is based on the `EchoBot` template. The EchoBot simply echoes back whatever you type, along with a turn counter. We'll use only the skeleton of this bot; the guts will be replaced with code for cryptonym identification and document search. We'll add a customized Web app that includes our own CSS styles and images. Finally, we'll add speech and voice capability, first with the standard voice and language models, then with custom ones tailored to the app.
 
 
-1. Deploy the text analytics service. 
+1. [Create a resource group for your services](https://ms.portal.azure.com/#create/Microsoft.ResourceGroup)
+
+1. [Deploy the text analytics service](https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesTextAnalytics). 
 
     The bot uses the Text Analytics service to extract keywords from user queries. Let’s create this resource first. Click **+ Create a Resource** in the sidebar, then search for "Text Analytics." For this tutorial you can use the free pricing tier
 
@@ -67,15 +69,15 @@ The Hoover bot is based on the `EchoBot` template. The EchoBot simply echoes bac
 
     <img src="../Assets/TextAnalyticsDeploy.png">
 
-1. Once the service has completed deploying, find the access key by clicking on the **Keys** option in the left frame. Copy this key into the corresponding spot in `JFKHooverBotTemplate.txt`, you will need it later. Also make a note of the region you choose.
+1. Once the service has completed deploying, find the access key by clicking on the **Keys** option in the left frame. Copy this key into the corresponding spot in `JFKHooverBotTemplate.txt`. You will need it later. Also make a note of the region you choose.
 
-1. Create a Web App Bot
+1. [Create a Web App Bot](https://ms.portal.azure.com/#create/Microsoft.BotServiceSdkGalleryPackage)
 
     In the Azure portal click **+ Create a Resource** in the sidebar, then choosing "Web App Bot" under **AI + Machine Learning**. You can also search for "Web App Bot."
 
     <img src="../Assets/WebAppBot.png">
 
-    This style of bot includes a Web hosting component, which we'll use to host the Web page containing a chat interface to the bot. The free pricing tier is suitable for developing the bot. Choose "EchoBot (C#)" as the template.
+    This style of bot includes a Web hosting component, which we'll use to host the Web page containing a chat interface to the bot. The free pricing tier is suitable for developing the bot. Choose **EchoBot (C#)** as the template.
 
     Your bot will be hosted on a subdomain of azurewebsites.net. Therefore, its name must be unique among all Azure Web sites. Try hooverbot-abc where abc are your initials, or variations on this theme. Valid characters are letters (not case sensitive, numbers, and hyphens.
 
@@ -83,7 +85,7 @@ The Hoover bot is based on the `EchoBot` template. The EchoBot simply echoes bac
 
 1. Download the source code
 
-    Download the source code for the bot from the Build blade of the new Web App Bot resource. This download is a Visual Studio solution that we will customize with our own code and resources. 
+    Download the source code for the bot from the Build blade of the new Web App Bot resource. We will use this Visual Studio solution template to customize with our own code and resources. 
 
     We could start a project from scratch, but it's easier to start with one created by the Bot Service, since it already includes the information needed to publish and run the bot in the Azure cloud.
 
@@ -93,10 +95,11 @@ The Hoover bot is based on the `EchoBot` template. The EchoBot simply echoes bac
 
 1. Open the extracted solution folder and double-click the `EchoBotWithCounter.sln` file to launch Visual Studio and open the project.
 
-1. Using NuGet (**Tools > NuGet Package Manager**), add the following libraries. Check the `include prerelease` option:
+1. Using NuGet (**Tools > NuGet Package Manager**), check the **include prerelease** option and add the following libraries:
 
     - `Microsoft.Azure.Search.Data`: the Azure Search client.
-  `Microsoft.Azure.CognitiveServices.Language.TextAnalytics`: the Text Analytics client 
+    
+    - `Microsoft.Azure.CognitiveServices.Language.TextAnalytics`: the Text Analytics client 
 
    - `Microsoft.AdaptiveCards`: flexible cards for bot responses.
 
@@ -106,11 +109,11 @@ The Hoover bot is based on the `EchoBot` template. The EchoBot simply echoes bac
 
 1. Copy the files from the `bot1` folder of this repository to the top level of the Visual Studio project folder. Some of the files have the same names as files already in the project. Allow the files being copied to replace the existing ones. 
 
-    These files include the basic functionality of the bot but without speech capabilities. 
+    These files include the basic functionality of the bot but without speech capabilities. These files are described in the next section.
 
 1. Open `appsettings.json` and enter the required values.
 
-    - **botFilePath** and **botFileSecret** can be found in the Application Settings blade of your Web App Bot (scroll down to the Application Settings heading).
+    - **botFilePath** and **botFileSecret** can be found in the Application Settings blade of your Web App Bot (scroll down to the Application Settings heading). Copy these values into the `JFKHooverBotTemplate.txt` file for later use.
 
       <img src="../Assets/bot-secret-location.png">
 
@@ -127,7 +130,7 @@ The Hoover bot is based on the `EchoBot` template. The EchoBot simply echoes bac
 
 1. Copy the files from the provided `wwwroot1` folder of this repository into the `wwwroot` folder in the visual studio project. These files contain the bot's user interface and client-side logic. Again, allow same-named files to replace existing files.
 
-1. Make sure the project builds and runs. With the project running, try your bot in the emulator. Just double-click the `.bot` file in Visual Studio.
+1. Make sure the project builds and runs. With the project running, try your bot in the emulator. Open the Bot Emulator, click **Open Bot** and navigate to your solution's `.bot` file. You will need to enter the bot file secret you copied earlier.
 
     <img src="../Assets/JFKBotEmulator.png">
 
@@ -198,9 +201,12 @@ Publish the bot to the Azure cloud by following these steps.
 
 1.	Right-click the project in the Solution Explorer and choose **Publish** to open the Publish page.
 
-    <img src="../Assets/publish.png">
+    <img src="../Assets/publish2.jpg">
 
+    
 1.	On the Publish page, click **Publish**.
+
+    <img src="../Assets/publish.png">
 
 1.	When you're asked for the password, paste the userPWD you copied earlier and click **OK**.
 
@@ -222,11 +228,13 @@ It is straightforward to add speech recognition and voice response, thanks to We
 
 A custom language model helps assure that the bot recognizes the cryptonyms (code names) used for certain persons, programs, and events. A custom voice allows the bot to respond using a facsimile of J. Edgar Hoover's voice.
 
-There’s a wrinkle:  Web Chat’s speech integration does not yet support custom speech and language models, though that support is in the works. To mitigate this we’ll use the Speech Service JavaScript SDK directly for speech recognition and use its REST interface for speech synthesis.
+>**There’s a wrinkle**:  Web Chat’s speech integration does not yet support custom speech and language models, though that support is in the works. To mitigate this we’ll use the Speech Service JavaScript SDK directly for speech recognition and use its REST interface for speech synthesis.
 
 ## Basic Speech Support
 
-We need to make a few changes to the server-side code to send the text to be spoken along with each response. In some cases, the spoken text will be slightly different from the text displayed in the chat window. This is done by setting the Speak attribute on the reply message sent to the client.
+We need to make a few changes to the server-side code to send the text to be spoken along with each response. In some cases, the spoken text will be slightly different from the text displayed in the chat window. This is done by setting the Speak attribute on the reply message sent to the client. 
+
+Let's first discuss the changes which need to be made.
 
 The changes in `EchoWithCounterBot.cs` are simple:
   - We add a method `SendSpeechReply()` as a complement to `SendTextOnlyReply()`. This new convenience method is used to send replies with their Speak attribute set. The caller can optionally pass a second string representing the speech to be produced if it’s different from the display text.  We change several calls to use `SendSpeechReply()`.
@@ -258,16 +266,25 @@ The browser JavaScript needs the following changes, also relatively minor, to en
                 }, webchat);
     ```
 
-  - `settings.js` needs a Speech Service subscription key. Deploy a speech service [here](https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesSpeechServices). Once it has deployed, copy the key into the appropriate spot in `JFKHooverBotTemplate.txt`
+  - `settings.js` needs a Speech Service subscription key. 
 
-  You can make these changes to your bot by closing the project in Visual Studio then copying the `EchoWithCounterBot.cs` file from the `bot2` folder to the top-level folder of the Visual Studio project, replacing the existing file. Similarly, copy the `bot.htm` file from `wwwroot2` into the project’s `wwwroot` folder.
+  ### Update your Bot
 
+  1. Deploy a speech service [here](https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesSpeechServices). Once it has deployed, copy the key into the appropriate spot in `JFKHooverBotTemplate.txt`. You can ignore the other fields (speechRecognitionEndpoint, speechSynthesisEndpoint ) in the template file. These are needed for the custom model.
 
-  Open `wwwroot/settings.js` and add the speech key. Build and deploy the bot as before, then try out the speech feature in the browser by clicking the microphone icon. You can speak a question such as “What is RYBAT?” and the response will be spoken.
-
-  But… there is an immediately obvious problem with our example. Our bot doesn’t recognize RYBAT as a word, instead recognizing it as “rye bat” or something similar (“ripe hat,” maybe). 
+  1. Copy the updated `EchoWithCounterBot.cs` file from the `bot2` folder to the top-level folder of the Visual Studio project, replacing the existing file. 
   
-  How can we fix that?
+  1. Similarly, copy the `bot.htm` file from `wwwroot2` into the project’s `wwwroot` folder.
+
+  1. Open `wwwroot/settings.js` and add the speech key. 
+  
+  1. Build and deploy the bot as before
+  
+  1. Try out the speech feature in the browser by clicking the microphone icon. You can speak a question such as “What is RYBAT?” and the response will be spoken.
+  
+      But… there is an immediately obvious problem with our example. Our bot doesn’t recognize RYBAT as a word, instead recognizing it as “rye bat” or something similar (“ripe hat,” maybe). 
+  
+     How can we fix that?
 
 ## Customizing Speech Recognition
 
@@ -290,17 +307,15 @@ Some cryptonyms are regular English words, like ZIPPER. There are still included
 
 Creating a custom language model using the cryptonym pronunciation data also requires language data; you can't train a language model without both files. The language file contains phrases or sentences that are likely to be uttered by a user. The language data is treated as an addition to a base model, so it needn't be extensive. We have provided a file, `questions.txt`, consisting of a handful of sample questions that users might ask the Hoover Bot.
 
-With these two files, you're ready to adapt Speech Recognition to the needs of the Hoover Bot. 
+With these two files, you are ready to adapt Speech Recognition to the needs of the Hoover Bot. 
 
 > **NOTE: This process can take a while to complete. For the lab we will be providing keys to a model which has already been trained and deployed**
 
  You can walk you through the process below for later use and to understand the steps.
 
-1.	Create a Speech Service subscription in the Azure portal if you haven’t already.
-
 1.	Log in to the Custom Voice and Speech portal, [cris.ai](http://cris.ai/), with the same Microsoft account you use for your Azure subscriptions.
 
-    The first time you log in, you'll be asked to associate your Custom Voice and Speech account with a Speech Service subscription.
+    The first time you log in, you'll be asked to associate your Custom Voice and Speech account with a Speech Service subscription. Use the speech service key from you the Speech service you deployed earlier.
 
     <img src="../Assets/crissubscriptions.png">
 
@@ -315,6 +330,8 @@ With these two files, you're ready to adapt Speech Recognition to the needs of t
 1. Next, upload cryptonyms.txt as a pronunciation data set. Click **Import** next to Pronunciation Data Sets, fill out the form, and attach `cryptonyms.txt`. Again click **Import** to proceed.
 
     It takes a moment to process the new data sets. Wait until both data sets have a status of Succeeded before continuing.
+
+    <img src="../Assets/import-pronunciation-data.jpg">
 
 1. Switch to the Language Models page and click **Create New** to use these data sets to train the speech recognizer.
 
@@ -341,7 +358,7 @@ While we’re customizing things, let’s make our bot's voice sound like J. Edg
 The quality of the recording isn't ideal. It's a telephone call to begin with, and the recording is old and contains a lot of static. We can't use any audio where Johnson and Hoover are speaking at the same time, which happens frequently. It would be better, as well, if we had a lot more utterances. Still, even with just a couple hundred utterances, the synthesized voice is recognizably Hoover's. There are other recorded phone conversations between Johnson and Hoover that could provide further utterances if you want to improve the voice's quality.
 
 
-  >**TIP** We used the free Audacity audio editor to prepare the audio samples. [Audacity](https://www.audacityteam.org/) lets you "tag" segments of audio within the file, then export the tagged sections using the tag names as filenames. If you want to add more utterances, you'll find Audacity up to the task.
+  >**TIP** We used the free [Audacity](https://www.audacityteam.org/) audio editor to prepare the audio samples. Audacity lets you "tag" segments of audio within the file, then export the tagged sections using the tag names as filenames. If you want to add more utterances, you'll find Audacity up to the task.
 
 After extracting the utterances, we created a ZIP archive containing a numbered audio file for each utterance, along with a text file that holds the number of the file, a tab (code point 9), and the text of the utterance. The text has been normalized, spelling out numbers and abbreviations. And now we pass this data on to you.
 
@@ -350,7 +367,7 @@ Again, training can take a long time, so as with the custom language model, we�
 
 1.	Log in to the Custom Voice and Speech portal, [cris.ai](http://cris.ai/), with the same Microsoft account you use for your Azure subscriptions.
 
-1.	Upload the hoover.zip file and the transcript.txt file (both in the voice folder) to Custom Voice > Data. Click **Import Data**, fill in the Import Voice data form and choose the transcript and voice files, and click **Import**.
+1.	Go to **Custom Voice > Data** and click **Import Data**. fill in the Import Voice data form and choose the transcript file, `transcript.txt` and voice files, `audio.zip`. Both of these files are in `JFK-Example/voice` in this repo. Click **Import**.
 
     <img src="../Assets/import-voice-data.png">
 
@@ -373,7 +390,7 @@ Again, training can take a long time, so as with the custom language model, we�
 
 ## Enabling custom speech in the Web app
 
-As we noted earlier, we need to write our own code to integrate the Web Chat with our custom speech and voice services, since Web Chat currently does not support customized models and voices. Most of this is in `bot.htm`. The code is rather extensive, so we won’t show all of it here. Here’s a summary.
+As we noted earlier, we need to write our own code to integrate the Web Chat with our custom speech and voice services, since Web Chat currently does not support customized models and voices. Most of this is in `bot.htm`. The code is rather extensive, so we won’t show all of it here. Let's review the changes we need to make and then walk through the steps.
 
   - We hook into Web Chat’s underlying Direct Line protocol and subscribe to message events containing a speak attribute, and call our function `speak()` when one arrives. This function does a REST request to the Speech Service’s custom text-to-speech endpoint, receives the audio, and creates an HTML 5 audio player element to play it. To prevent two pieces of speech from overlapping, we use a queue (and a separate queue for the network requests). The audio may be cached and reused.
 
@@ -403,7 +420,7 @@ As we noted earlier, we need to write our own code to integrate the Web Chat wit
 
 The other change is that we now require all spoken questions to begin with “Mr. Hoover.” This way, we can be sure the question is being addressed to our bot and avoid responding to other speech in the vicinity.
 
-To add the new code:
+### To add the new code:
 
 1.	Update the code as before, copying the files from `bot3` into the top level of the Visual Studio project and the files from `wwwroot3` into the `wwwroot` folder of the Visual Studio project.
 1.	Open the `settings.js` file (in wwwroot) and add the custom Speech and Voice endpoints where indicated. You will find all the necessary keys in the `JFKHooverBotTemplate.txt` file.

@@ -1,6 +1,6 @@
 Bot Secrets: Get this from the Application Settings menu of the Web App deployed for your bot
-"botFileSecret": "<YOUR BOT SECRET>"
 "botFilePath": "./<YOUR BOT NAME>.bot"
+"botFileSecret": "<YOUR BOT SECRET>"
  
  QnA Maker From Azure Portal:
  Key: <Find the key from the Azure Portal when you deploy the QnA Maker Service>

@@ -6,7 +6,7 @@ The queries will then act as search terms for an encyclopedia, Microsoft Academi
 
 The steps in this tutorial will walk through how to add a speech input into the chat. We will use [Speech Service](https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/) for speech to text.
 
-<img src="../../Assets/study-bot-interface.png">
+<img src="../../Assets/study-bot-interface.PNG">
 
 ## Prerequisites
 
@@ -15,7 +15,7 @@ Complete the steps for deploying the Study Bot service [here](../Qna-Luis-Bot-v4
 ## Setup & Run the App
 1. After cloning this  repo, open the Study Bot solution file in Visual Studio 2017+.
 
-1. In `MainPage.xaml.cs`, add your Qna-Luis-Bot's bot's name (verbatim) you chose in Azure to `botHandle`. For example, Qna-Luis-Bot-v4.
+1. In `MainPage.xaml.cs`, add your Qna-Luis-Bot's bot's name (verbatim) to `botHandle`. For example, Qna-Luis-Bot-v4.
 
 1. Since the Study Bot UWP app is considered an external client that needs to access the bot in Azure, we'll need to connect it to a Channel called [Direct Line](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-directline?view=azure-bot-service-3.0). To do this go to the Channels menu in your web app bot resource in the Azure portal and click the globe icon.
 
@@ -40,11 +40,11 @@ This section will walk through the process of adding speech to text capabilities
 1. [Deploy](https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesSpeechServices) the speech service from the Azure portal. After the service has deployed, copy the key into the `StudyBotTemplate.txt` file. 
 
 
-1. In the Study App solution, you will need to install the speech NuGet package. To do this go to Tools -> NuGet Package Manager -> Manage NuGet Packages for Solution. Install the following package:
+1. In the Study App solution, you will need to install the speech NuGet package. To do this go to **Tools -> NuGet Package Manager -> Manage NuGet Packages for Solution**. Install the following package:
     
-    Microsoft.CognitiveServices.Speech
+    `Microsoft.CognitiveServices.Speech`
     
-    <img src="../../Assets/NugetPackageManager.jpg">
+    <img src="../../Assets/NugetPackageManager.JPG">
 
 
 1. Add a speech button the App. We will add the microphone icon which will call the 'Button_Mic' method when clicked. 

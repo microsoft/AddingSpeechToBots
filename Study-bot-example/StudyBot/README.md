@@ -31,6 +31,12 @@ Complete the steps for deploying the Study Bot service [here](../Qna-Luis-Bot-v4
 
 1.  Copy the Direct Line key in the botSecretKey varible at the top of the `MainPage.xaml.cs`.
 
+1. Install the `Microsoft.Bot.Builder.AI` package.o do this go to **Tools -> NuGet Package Manager -> Manage NuGet Packages for Solution**. 
+
+    >**NOTE:** you may need to install version 4.1.5 instead of the latest
+
+    <img src="../../Assets/NugetPackageManager.JPG">
+
 1. Build and Run the application. Ask the chat 'what is lava?'
 
 ## Add speech to the application
@@ -40,11 +46,11 @@ This section will walk through the process of adding speech to text capabilities
 1. [Deploy](https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesSpeechServices) the speech service from the Azure portal. After the service has deployed, copy the key into the `StudyBotTemplate.txt` file. 
 
 
-1. In the Study App solution, you will need to install the speech NuGet package. To do this go to **Tools -> NuGet Package Manager -> Manage NuGet Packages for Solution**. Install the following package:
-    
-    `Microsoft.CognitiveServices.Speech`
-    
-    <img src="../../Assets/NugetPackageManager.JPG">
+1. In the Study App solution, you will need to install the speech NuGet package. Follow the same steps as before and search for `Microsoft.CognitiveServices.Speech` in the NuGet Package Manager.
+
+1. Add the Microphone as a capability in the app. Open `Package.appxmanifest` and select **Microphone**
+
+    <img src="../../Assets/Capability-microphone.PNG">
 
 
 1. Add a speech button the App. We will add the microphone icon which will call the 'Button_Mic' method when clicked. 
@@ -65,14 +71,14 @@ This section will walk through the process of adding speech to text capabilities
         using Microsoft.CognitiveServices.Speech;
         ```
 
-    1. Add in your speech service connection information inside the `MainPage` class, next to the bot info:
+    1. Add in your speech service connection information inside the `MainPage` class at line 40 next to the bot credentials:
 
         ```cs
         string speechSubscription = "<YOUR AZURE SPEECH SERVICE SUBSCRIPTION KEY>";
 		string speechRegion = "<YOUR REGION>";
         ```
 
-    1. Update the placeholder text in the chat window. Find where the following variable is set. This should be roughly on line 68. 
+    1. Update the placeholder text in the chat window. Update the following variable assigment on line 71. 
 
         ```cs
         NewMessageTextBox.PlaceholderText = "Type a study term or click the mic button to speak.";

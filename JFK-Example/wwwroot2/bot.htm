@@ -71,7 +71,7 @@
             const bot = { id: 'hooverbot', name: 'J. Edgar Hoover', role: "bot" };
 
             const webSpeechPonyfillFactory = await window.WebChat.createCognitiveServicesSpeechServicesPonyfillFactory({
-                region: 'westus',
+                region: speechRegion,
                 subscriptionKey: speechKey
             });
 

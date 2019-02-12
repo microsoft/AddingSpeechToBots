@@ -134,7 +134,7 @@ The MSBot tool is a command line tool to create and manage bot resources describ
 
 1. This Dispatch sequence also creates a special LUIS app for the Dispatch service in luis.ai. 
 
-    Go to your account in luis.ai and find the Dispatch app just created. You can see there is a `None` intent (default) and then your knowledge base intents. However, these are not named well, make sure to rename them (click pencil icon near title) to match the naming of the QnA knowledge bases. For instance, the geology KB is named StudyGeology, in luis.ai, qnamaker.ai, and in the .bot file (name field of each object). They all need to match.
+    Go to your account in luis.ai and find the Dispatch app just created. You can see there is a `None` intent (default) and then your knowledge base intents. You will also see that Dispatch has added a 'q_' pre-fix to the QnA Maker name for each intent.
 
 1. After renaming your LUIS intents, train and publish them. It might take a minute or two to see the changes reflected in your responses in the chat client.
 

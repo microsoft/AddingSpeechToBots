@@ -120,10 +120,10 @@ namespace Microsoft.BotBuilderSamples
         /// </summary>
         private async Task DispatchToTopIntentAsync(ITurnContext context, (string intent, double score)? topIntent, CancellationToken cancellationToken = default(CancellationToken))
         {
-            const string chitchatDispatchKey = "Chitchat";
-            const string qnaBiologyDispatchKey = "StudyBiology";
-            const string qnaSociologyDispatchKey = "StudySociology";
-            const string qnaGeologyDispatchKey = "StudyGeology";
+            const string chitchatDispatchKey = "q_Chitchat";
+            const string qnaBiologyDispatchKey = "q_StudyBiology";
+            const string qnaSociologyDispatchKey = "q_StudySociology";
+            const string qnaGeologyDispatchKey = "q_StudyGeology";
 
             switch (topIntent.Value.intent)
             {

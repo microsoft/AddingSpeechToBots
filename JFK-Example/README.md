@@ -234,7 +234,7 @@ It is straightforward to add speech recognition and voice response, thanks to We
 
 A custom language model helps assure that the bot recognizes the cryptonyms (code names) used for certain persons, programs, and events. A custom voice allows the bot to respond using a facsimile of J. Edgar Hoover's voice.
 
->**There’s a wrinkle**:  Web Chat’s speech integration does not yet support custom speech and language models, though that support is in the works. To mitigate this we’ll use the Speech Service JavaScript SDK directly for speech recognition and use its REST interface for speech synthesis.
+>**There’s a wrinkle**:  Web Chat’s speech integration does not yet support custom speech and language models. To mitigate this we’ll use the Speech Service JavaScript SDK directly for speech recognition and use its REST interface for speech synthesis.
 
 ## Basic Speech Support
 

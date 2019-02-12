@@ -27,7 +27,7 @@ Complete the steps for deploying the Study Bot web app bot service [here](../Qna
 
     <img src="../../Assets/directline-done.png">
 
-1.  Paste your the Direct Line key into the botSecretKey variable at the top of the `MainPage.xaml.cs`. 
+1.  Paste your the Direct Line key into the `botSecretKey` variable at the top of the `MainPage.xaml.cs`. 
 
 1. Install the `Microsoft.Bot.Builder.AI` package to do this go to **Tools -> NuGet Package Manager -> Manage NuGet Packages for Solution**. 
 

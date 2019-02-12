@@ -15,7 +15,7 @@ Complete the steps for deploying the Study Bot service [here](../Qna-Luis-Bot-v4
 ## Setup & Run the App
 1. After cloning this  repo, open the Study Bot solution file in Visual Studio 2017+.
 
-1. In `MainPage.xaml.cs`, add your Qna-Luis-Bot's bot's name (verbatim) to `botHandle`. For example, Qna-Luis-Bot-v4.
+1. In `MainPage.xaml.cs`, add your Qna-Luis-Bot's bot's name (verbatim) to `botHandle`. For example, Qna-Luis-Bot-v4. 
 
 1. Since the Study Bot UWP app is considered an external client that needs to access the bot in Azure, we'll need to connect it to a Channel called [Direct Line](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-directline?view=azure-bot-service-3.0). To do this go to the Channels menu in your web app bot resource in the Azure portal and click the globe icon.
 
@@ -29,13 +29,7 @@ Complete the steps for deploying the Study Bot service [here](../Qna-Luis-Bot-v4
 
     <img src="../../Assets/directline-done.png">
 
-1.  Copy the Direct Line key in the botSecretKey varible at the top of the `MainPage.xaml.cs`.
-
-1. Install the `Microsoft.Bot.Builder.AI` package.o do this go to **Tools -> NuGet Package Manager -> Manage NuGet Packages for Solution**. 
-
-    >**NOTE:** you may need to install version 4.1.5 instead of the latest
-
-    <img src="../../Assets/NugetPackageManager.JPG">
+1.  Copy the Direct Line key in the `botSecretKey` varible at the top of the `MainPage.xaml.cs`.
 
 1. Build and Run the application. Ask the chat 'what is lava?'
 
@@ -76,15 +70,16 @@ This section will walk through the process of adding speech to text capabilities
         ```cs
         string speechSubscription = "<YOUR AZURE SPEECH SERVICE SUBSCRIPTION KEY>";
 		string speechRegion = "<YOUR REGION>";
+
         ```
 
-    1. Update the placeholder text in the chat window. Update the following variable assigment on line 71. 
+    1. Update the placeholder text in the chat window. Update the following variable assigment on line 70. 
 
         ```cs
         NewMessageTextBox.PlaceholderText = "Type a study term or click the mic button to speak.";
         ```
 
-    1. Add code for converting input speech to text. Open the `SpeechCode.cs` file and copy the method to the MainPage class. Ths code is derived from the following [sample](https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/how-to-recognize-speech-csharp). It does the following:
+    1. Add code for converting input speech to text. Open the `SpeechCode.cs` file and copy the method into the MainPage class. You can copy the code in at line 326. Ths code is derived from the following [sample].(https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/how-to-recognize-speech-csharp). It does the following:
 
         1. Creates a speech recognizer from the speech configuration. 
 

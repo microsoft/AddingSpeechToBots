@@ -131,7 +131,13 @@ The MSBot tool is a command line tool to create and manage bot resources describ
     msbot connect dispatch --input <name of your dispatch service>.dispatch --secret <bot secret> --subscriptionKey <luis authoring key>
     ```
 
-1. Update the `NlpDispatchBot.cs` file to reference the dispatch service you just created.
+1. This Dispatch sequence also creates a special LUIS app for the Dispatch service in luis.ai. 
+
+    Go to your account in luis.ai and find the Dispatch app just created. You can see there is a `None` intent (default) and then your knowledge base intents. However, these are not named well, make sure to rename them (click pencil icon near title) to match the naming of the QnA knowledge bases. For instance, the geology KB is named StudyGeology, in luis.ai, qnamaker.ai, and in the .bot file (name field of each object). They all need to match.
+
+1. After renaming your LUIS intents, train and publish them. It might take a minute or two to see the changes reflected in your responses in the chat client.
+
+1. Update the `NlpDispatchBot.cs` file to reference the dispatch service you just created. Update line 29.
 
     ```cs
     public static readonly string DispatchKey = "<dispatch name chosen above>";
@@ -139,15 +145,15 @@ The MSBot tool is a command line tool to create and manage bot resources describ
 
     Note: if you used different knowledge base names, you will also need to update the references to these knowledge bases in this file. (approx on line 35 & 123)
 
-1. This Dispatch sequence also creates a special LUIS app for the Dispatch service in luis.ai. 
+1. Install the `Microsoft.Bot.Builder.AI.QnA` package.o do this go to **Tools -> NuGet Package Manager -> Manage NuGet Packages for Solution**. 
 
-    Go to your account in luis.ai and find the Dispatch app just created. You can see there is a `None` intent (default) and then your knowledge base intents. However, these are not named well, make sure to rename them (click pencil icon near title) to match the naming of the QnA knowledge bases. For instance, the geology KB is named StudyGeology, in luis.ai, qnamaker.ai, and in the .bot file (name field of each object). They all need to match.
+    >**NOTE:** you may need to install version 4.1.5 instead of the latest
 
-1. After renaming your LUIS intents, train and publish them. It might take a minute or two to see the changes reflected in your responses in the chat client (if already testing).
+    <img src="../../Assets/NugetPackageManager.JPG">
 
 #### Enable Bing Spell Check
 
-1. [Deploy](https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesBingSpellCheck-v7) an instance of Bing Spell Check v7 resource in teh Azure portal and copy the key into the `StudyBotTemplate.txt` file
+1. [Deploy](https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesBingSpellCheck-v7) an instance of Bing Spell Check v7 resource in teh Azure portal and copy the key into the `StudyBotTemplate.txt` file.
 
 1. Copy the Bing Search key into line 32 in `Start.cs`. 
 

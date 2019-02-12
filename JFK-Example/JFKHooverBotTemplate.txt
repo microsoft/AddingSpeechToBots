@@ -17,6 +17,7 @@ Custom Voice & Speech Models. To be provided
 const speechKey = "";
 const speechRecognitionEndpoint = "";
 const speechSynthesisEndpoint = "";
+const speechRegion = "westus";
 const tokenEndpoint = "https://westus.api.cognitive.microsoft.com/sts/v1.0/issueToken";
 
 

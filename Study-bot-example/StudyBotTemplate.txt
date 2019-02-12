@@ -1,5 +1,5 @@
 Bot Secrets: Get this from the Application Settings menu of the Web App deployed for your bot
-"botFilePath": "./<YOUR BOT NAME>.bot"
+"botFilePath": "./<YOUR BOT NAME>.bot",
 "botFileSecret": "<YOUR BOT SECRET>"
  
  QnA Maker From Azure Portal:

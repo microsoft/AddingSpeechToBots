@@ -111,7 +111,7 @@ The Hoover bot is based on the `EchoBot` template. The EchoBot simply echoes bac
 
     These files include the basic functionality of the bot but without speech capabilities. These files are described in the next section.
 
-1. Open `appsettings.json` and enter the required values.
+1. Open `appsettings.json` in the `wwwroot` folder and enter the required values.
 
     - **botFilePath** and **botFileSecret** can be found in the Application Settings blade of your Web App Bot (scroll down to the Application Settings heading). Copy these values into the `JFKHooverBotTemplate.txt` file for later use.
 
@@ -132,11 +132,15 @@ The Hoover bot is based on the `EchoBot` template. The EchoBot simply echoes bac
 
 1. Make sure the project builds and runs. With the project running, try your bot in the emulator. Open the Bot Emulator, click **Open Bot** and navigate to your solution's `.bot` file. You will need to enter the bot file secret you copied earlier.
 
-    <img src="../Assets/JFKBotEmulator.png">
-
-    >**NOTE**: The .bot file is encrypted. The first time you open your bot in the Emulator, you'll be prompted for your bot file secret; it's the same secret you pasted into appsettings.json.
+    >**NOTE**: The .bot file is encrypted. The first time you open your bot in the Emulator, you'll be prompted for your bot file secret; it's the same secret you pasted into `appsettings.json`.
 
     >**NOTE**: Running the project also opens the Web Chat app in a browser. This app connects to a version of the bot running in the Azure cloud. It won't work until you publish the bot. For now, use the emulator to test the unpublished version of your bot. There are a few more things to do before the bot is ready to be hosted in the cloud.
+
+    >**NOTE**: Clean & Re-build your solution after copying in new files to make sure they are included
+
+    <img src="../Assets/JFKBotEmulator.png">
+
+    
 
 ## Looking at the code
 
@@ -166,7 +170,7 @@ The Hoover bot is based on the `EchoBot` template. The EchoBot simply echoes bac
 
 Azure Bot Service's Web Chat is a JavaScript component that lets you embed your bot in any Web site. We'll use it in the J. Edgar Hoover Bot Web page.
 
-To get Web Chat to talk to your bot, you must enable the bot's Direct Line channel and provide an authentication token in the `settings.js` file in the `wwroot` folder.
+To get Web Chat to talk to your bot, you must enable the bot's Direct Line channel and provide an authentication token in the `settings.js` file in the `wwwroot` folder.
 
 1. In the Azure portal, enable Direct Line in your Web App Bot's Channels blade.
 
@@ -184,13 +188,15 @@ To get Web Chat to talk to your bot, you must enable the bot's Direct Line chann
 
     <img src="../Assets/directline-keys.png">
 
-1. Also copy the key into the `botSecret` variable at the top of `settings.js`.
+1. Also copy the key into the `botSecret` variable at the top of `settings.js` within the `wwwroot` folder.
 
 1. Save `settings.js`
 
     > **NOTE**: For more help, see [Connect a bot to Direct Line](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-directline?view=azure-bot-service-3.0)
 
 1. After you've added the Direct Line secret to `settings.js`, publish the bot so you can try it in a browser. 
+
+1. Clean & re rebuild your solution in the **Build** option in the top frame.
 
 ## Publishing the Bot
 Publish the bot to the Azure cloud by following these steps.
@@ -201,7 +207,7 @@ Publish the bot to the Azure cloud by following these steps.
 
 1.	Right-click the project in the Solution Explorer and choose **Publish** to open the Publish page.
 
-    <img src="../Assets/publish2.jpg">
+    <img src="../Assets/publish2.JPG">
 
     
 1.	On the Publish page, click **Publish**.
@@ -266,7 +272,7 @@ The browser JavaScript needs the following changes, also relatively minor, to en
                 }, webchat);
     ```
 
-  - `settings.js` needs a Speech Service subscription key. 
+  - `settings.js` in the `wwwroot` folder needs a Speech Service subscription key. 
 
   ### Update your Bot
 
@@ -276,9 +282,9 @@ The browser JavaScript needs the following changes, also relatively minor, to en
   
   1. Similarly, copy the `bot.htm` file from `wwwroot2` into the project’s `wwwroot` folder.
 
-  1. Open `wwwroot/settings.js` and add the speech key. 
+  1. Open `wwwroot/settings.js` and add the speech key & make sure `speechRegion` matches the region you chose when you deployed the speech service. Ignore the `speechRecognitionEndpoint`, `speechSynthesisEndpoint` and `tokenEndpoint` fields for now. 
   
-  1. Build and deploy the bot as before
+  1. Clean, re-build and deploy the bot as before
   
   1. Try out the speech feature in the browser by clicking the microphone icon. You can speak a question such as “What is RYBAT?” and the response will be spoken.
   
@@ -321,13 +327,17 @@ With these two files, you are ready to adapt Speech Recognition to the needs of 
 
 1.	Click **Connect existing subscription**, then enter either of the subscription keys for your Speech Service subscription and click **Add**.
 
-1.	Upload `questions.txt` as a language data set to **Custom Speech > Adaptation Data**. Both files are in the speech folder.
+1. Click **Custom Speech -> Adaptation Data** in the upper left tabs
+
+    <img src="../Assets/adaptiondata.PNG">
+
+1.	Upload `questions.txt` in the `speech` folder as a language data set to **Custom Speech > Adaptation Data**. 
 
     First, click **Import** next to Language Data Sets, fill out the form, and attach questions.txt. Click **Import** to proceed.
 
     <img src="../Assets/Import-language-data.png">
 
-1. Next, upload cryptonyms.txt as a pronunciation data set. Click **Import** next to Pronunciation Data Sets, fill out the form, and attach `cryptonyms.txt`. Again click **Import** to proceed.
+1. Click **Import** next to Pronunciation Data Sets, fill out the form, and attach the `cryptonyms.txt` file in the `speech` folder. Again click **Import** to proceed.
 
     It takes a moment to process the new data sets. Wait until both data sets have a status of Succeeded before continuing.
 
@@ -378,7 +388,7 @@ Again, training can take a long time, so as with the custom language model, we�
 
     <img src="../Assets/create-model.png">
 
-    This operation can take a significant amount of time, so perhaps let it run overnight. You can train a custom speech model at the same time (see next section).
+    Creating a custom voice model can take a significant amount of time, so perhaps let it run overnight. You can train a custom speech model at the same time (see next section).
 
 1. After the new custom voice has been created, click **Deploy** next to the new voice in the Models page to create a new endpoint.
 
@@ -423,7 +433,10 @@ The other change is that we now require all spoken questions to begin with “Mr
 ### To add the new code:
 
 1.	Update the code as before, copying the files from `bot3` into the top level of the Visual Studio project and the files from `wwwroot3` into the `wwwroot` folder of the Visual Studio project.
-1.	Open the `settings.js` file (in wwwroot) and add the custom Speech and Voice endpoints where indicated. You will find all the necessary keys in the `JFKHooverBotTemplate.txt` file.
+
+1.	Open the `wwwroot\settings.js` file and add the custom Speech and Voice endpoints where indicated. You will find all the necessary keys in the `JFKHooverBotTemplate.txt` file.
+
+    >**NOTE**: If you switched to the provided custom speech endpoints, make sure to update the `speechRegion` and `speechKey` variables to match the new service.
 
 1.	Build and publish the bot as before. The bot's Web Chat opens in a browser. It takes a moment for the bot to "warm up" after the service is restarted, so wait patiently until the bot displays its greeting.
 

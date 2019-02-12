@@ -1,0 +1,27 @@
+Bot Path & Secret
+"botFilePath": "from Application Settings blade of your Web App Bot (under Application Settings heading)",
+"botFileSecret": "from Application Settings blade of your Web App Bot (under Application Settings heading)",
+
+Azure  Search Info:
+"searchName": "<name of the search index deployed for the JFK files",
+"searchKey": "<Query Key for the search index>",
+"searchIndex": "jfkindex",
+"searchUrl": "https://<website deployed for the JFK files>.azurewebsites.net/#/search?term=",
+"textAnalyticsKey": "<Key for Text Analytics Cognitive service>",
+"textAnalyticsEndpoint": "https://<region for text analytics deployment>.api.cognitive.microsoft.com"
+
+Bot Directline Secret
+const botSecret = "from the Direct Line channel in the Channels blade of your Web App Bot";
+
+Custom Voice & Speech Models. To be provided
+const speechKey = "";
+const speechRecognitionEndpoint = "";
+const speechSynthesisEndpoint = "";
+const speechRegion = "westus";
+const tokenEndpoint = "https://westus.api.cognitive.microsoft.com/sts/v1.0/issueToken";
+
+
+Deployment Info. Get this from PostDeployScripts/<bot name>.PublishSettings
+msdeploySite="" 
+userName=""     
+userPWD="" 

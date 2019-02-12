@@ -1,0 +1,610 @@
+ZRWAHOO	z r wahoo
+ZRWAGON	z r wagon
+ZRTORCH	z r torch
+ZRSOLO	z r solo
+ZRSIGN	z r sign
+ZRRIFLE	zr rifle
+ZRPRIMA	z r prima
+ZRPENNY	z r penny
+ZRMETAL	z r metal
+ZRKNICK	z r knick
+ZRJOINT	z r joint
+ZRGRACE	z r grace
+ZRCLIFF	z r cliff
+ZRCHEST	z r chest
+ZRBEACH	z r beach
+ZRALERT	z r aleart
+ZRAFRAID	z r afraid
+ZR	z r
+ZOMBIE	zombie
+ZODIAC	zodiac
+ZIPPER	zipper
+YOBELT	yo belt
+YOACRE	yo acre
+YEAST	yeast
+WUMUTUAL	w u mutual
+WUBRINY-1	w u briny one
+WUBRINY	w u briny
+WUBONBON	w u bonbon
+WSHOOFS	w s hoofs
+WSCHILD	w s child
+WSBURNT	w s burnt
+WSACROBAT	w s acrobat
+WS	w s
+WOMUSE	m d muse
+WOMACE	m d mace
+WOHIVE	m d hive
+WOFACT	m d fact
+WOBONE	m d bone
+WO	m d
+WIROGUE	w i rogue
+UNSTAR	un star
+UNSNAFU-9	un snafu nine
+UNRUMBLE-2	un rumble two
+UN	u n
+TWIXT	twixt
+TPELIDE	t p elide
+TOPAZ	topaz
+TODHUNTER	todd hunter
+TARBRUSH	tar brush
+STESCALADE	s t escalade
+SMOTH	s m oth
+SM	s m
+SLFREE-1	s l free one
+SLEEPER	sleeper
+SKEWER-1	skewer one
+SGHOUSE	sg house
+RYBAT	rye bat
+REDWOOD	red wood
+REDTOP	red top
+REDSOX	red socks
+REDSKIN	red skin
+REDCOAT	red coat
+REDCAP	red cap
+QUSWIFT-7	q u swift seven
+QUSWIFT-1	q u swift one
+QUSPORT-1	q u sport one
+QUHOPS-1	q u hops one
+QKOPERA	q k opera
+QKMAGNET	q k magnet
+QKIVORY	q k ivory
+QKHILLTOP	q k hilltop
+QKGLACE	q k glace
+QKFLOWAGE	q k flowage
+QKENCHANT	q k enchant
+QKACTIVE	q k active
+QK	q k
+QJWIN	q j win
+QJBANNER-1	q j banner one
+QDELF	q d elf
+QDDALE	q d dale
+QDCOVE	q d cove
+QDCHAR	q d char
+QDBIAS	q d bias
+QD	q d
+PLVWBLANKET	p l v w blanket
+PLMHABYSS	p l m h abyss
+PEKLOK	peck lock
+PBSWING	p b swing
+PBSUCCESS	p b success
+PBRUMEN	p b rumen
+PBPRIME	p b prime
+PBIMPULSE	p b impulse
+PBHISTORY	p b history
+PB	p b
+PAWNEE-5	pawnee five
+PAWNEE-3	pawnee three
+PASSAVOY	pass avoy
+PARAGON	paragon
+PALP	palp
+OWVL	o w v l
+OPIM	o p i m
+OLYMPUS	olympus
+ODYOKE	o d yoke
+ODWIFE	o d wife
+ODURGE	o d urge
+ODUNIT	o d unit
+ODOATH	o d oath
+ODINCH	o d inch
+ODIBEX	o d ibex
+ODFOAM	o d foam
+ODENVY	o d envy
+ODEARL	o d earl
+ODBOON	o d boon
+ODBEAT	o d beat
+ODALOE	o d aloe
+ODACID	o d acid
+OD	o d
+NOTLOX	not lox
+NIEXIT-3	n i exit
+NEMOV-1	n e mov one
+MONGOOSE	mongoose
+MKULTRA	m k ultra
+MKTRAP	m k trap
+MKTOPAZ	m k topaz
+MKNAOMI	m k naomi
+MKCHARITY	m k charity
+MK	m k
+MHVIPER	m h viper
+MHORDER	m h order
+MHDOWEL	m h dowel
+MHCHILD	m h child
+MHCHAOS	m h chaos
+MHAPRON	m h apron
+MH	m h
+MERRIMAC	merra mac
+LPOVER	l p over
+LPHIDDEN	l p hidden
+LNERGO	l n ergo
+LNAGON	l n agon
+LITENSOR	l i tensor
+LITEMPO-8	l i tempo eight
+LITEMPO-4	l i tempo four
+LITEMPO-2	l i tempo two
+LITEMPO-12	l i tempo twelve
+LITEMPO-1	l i tempo one
+LITEMPO	l i tempo
+LITAMIL-9	l i tamil nine
+LITAMIL-7	l i tamil seven
+LITAMIL-3	l i tamil three
+LITAMIL-2	l i tamil two
+LITAMIL-13	l i tamil thirteen
+LITAMIL-1	l i tamil one
+LITAMIL	l i tamil
+LITAINT-7	l i taint seven
+LITAINT-5	l i taint five
+LITAINT-1	l i taint one
+LITAINT	l i taint
+LITABBY	l i tabby
+LISICLE-1	l i sicle one
+LISAMPAN	l i sampan
+LIROMANCE	l i romance
+LIRING-3	l i ring three
+LIRING-1	l i ring one
+LIRICE	l i rice
+LIRAVINE	li ravine
+LIPSTICK-20	lipstick twenty
+LIPSTICK	lipstick
+LIPLUG	l i plug
+LIOVAL-1	l i oval one
+LIOSAGE	l i osage
+LIOOZE-1	l i ooze
+LIONION-2	l i onion two
+LIONION-1	l i onion one
+LIONION	l i onion
+LINOODLE	l i noodle
+LINLUCK	l in luck
+LINILE-1	l i nile one
+LINEB-1	l i neb one
+LIMUST	l i must
+LIMUD	l i mud
+LIMOTOR	l i motor
+LIMITED	limited
+LIMEW	l i new
+LIMESA	l i mesa
+LIMERICK	limerick
+LIMASK-1	l i mask one
+LILYRIC	l i lyric
+LILISP	l i lisp
+LIKAYAK-2	l i kayak two
+LIJERSEY	l i jersey
+LIHUFF-2	l i huff two
+LIHUFF-1	l i huff one
+LIHUFF	l i huff
+LIHABIT	l i habit
+LIGAFF	l i gaff
+LIFIRE	l i fire
+LIFEUD-22	l i feud twenty two
+LIFEUD-2	l i feud two
+LIFEUD-1	l i feud one
+LIFEAT	l i feat
+LIEVICT	l i evict
+LIERODE	l i erode
+LIENVOY-2	l i enjoy two
+LIENVOY-16	l i envoy sixteen
+LIENVOY	l i envoy
+LIENTRAP	l i entrap
+LIEMPTY-9	l i empty nine
+LIEMPTY-6	l i empty six
+LIEMPTY-2	l i empty two
+LIEMPTY-19	l i empty nineteen
+LIEMPTY-14	l i empty fourteen
+LIEMPTY-1	l i empty one
+LIEMPTY	l i empty
+LIEMBRACE-11	l i embrace eleven
+LIEMBRACE	l i embrace
+LIELEGANT	l i elegant
+LICOOL	l i cool
+LICOOKY-1	l i cookie one
+LICOMET-1	l i comet one
+LICOAX	l i coax
+LICHEW	l i chew
+LICHANT-1	l i chant one
+LICALLA	l i calla
+LIBIGHT	l i bight
+LIANCHOR	l i anchor
+LI	l i
+LCPIPIT	l c pipit
+LCPANGS	l c pangs
+LCIMPROVE	l c improve
+LCHARVEST	l c harvest
+LCFLUTTER	l c flutter
+LC	l c
+LAURICLE	l a auricle
+LAROB	l a rob
+KUWOLF	k u wolf
+KUTUBE/D	k u tube d
+KUTUBE	k u tube
+KUSODA	k u soda
+KUROAR	k u roar
+KURIOT	k u riot
+KUMONK	k u monk
+KULOOK	k u look
+KUJUMP	k u jump
+KUJAZZ	k u jazz
+KUHOOK	k u hook
+KUGOWN	k u gown
+KUFIRE	k u fire
+KUDOVE	k u dove
+KUDESK	k u desk
+KUCLUB	j u club
+KUCAGE	k u cage
+KUBARK	k u bark
+KU	k u
+KMPLEBE	k m plebe
+KMPAJAMA	km pajama
+KMLASKING	k m lasking
+KMFORGET	k m forget
+KMFLUSH	k m flush
+KLAMBROSIA-29	k l ambrosia twenty nine
+KL	k l
+KEYWAY	key wya
+KAPOK	kay pock
+JMZIP	j m zip
+JMWAVE	j m wave
+JMTRAV	j m trav
+JMTIDE	j m tide
+JMSPUR	j m spur
+JMRIMM	j m rimm
+JMPALM	j m palm
+JMNET	j m net
+JMMOVE	j m move
+JMHOPE	j m hope
+JMHARP	j m harp
+JMGOLD	j m gold
+JMGIN	j m gin
+JMFURY	j m fury
+JMFIG	j m fig
+JMDUSK	j m dusk
+JMCLOSET	j m closet
+JMCLIPPER	j m clipper
+JMCLEAR	j m clear
+JMBLUG	j m blug
+JMBELL	j m bell
+JMBAR	j m bar
+JMATE	j m ate
+JMASH	j m ash
+JMARC	j m arc
+JMADD	j m add
+JM	j m
+JKLANCE	j k lance
+JFK	j f k
+HYSAGE-1	h y sage one
+HTPLUME	h t plum
+HTLINGUAL	h t lingual
+HTKEEPER	h t keeper
+HTBASTE	h t baste
+HT	h t
+HBFINCH	h b finch
+HBEPITOME	h b epitome
+GYROSE	g y rose
+GRIP	grip
+GPPHOTO	g p photo
+GPLOGIC	g p logic
+GPIDEAL	g p ideal
+GPFOCUS	g p focus
+GPFLOOR	g p floor
+GPBEFIT	g p befit
+GPAZURE	g p azure
+GP	g p
+GOOSECREEK	goose creek
+GOLIATH	goliath
+GFGESTETNER	gf gestetner
+FJSTEAL	f j steal
+FJHEARSAY	f j hearsay
+FJDUST	f j dust
+EVAL-3	eval three
+ESLARD-1	e s lard one
+ERYTHROID-3	erythroid three
+ERACERB-1	erase r b one
+DYVOUR	die vore
+DTLEAFAGE	d t leafage
+DTGODOWN	d t go down
+DTFROGS	d t frogs
+DTDORIC	d t doric
+DN	d n
+DMLIVID	d m livid
+DM	d m
+DIZTAG	diz tag    
+DI	d i
+DAINOLD	dane old
+cryptonym	cryptonym
+CITASTE	c i taste
+CIFENCE-4	c i fence four
+CELOTEX-2	see lo tex two
+CELOTEX-1	see lo tex one
+CARROT	carrot
+CAPRICE-1	caprice one
+CANDI	candy
+BUTANE	butane
+BLANKET	blanket
+BKHERALD	b k herald
+BKCROWN	b k crown
+BGGYPSY	b g gypsy
+BGACTRESS	b g actress
+BEVISION	b e vision
+BESMOOTH	b e smooth
+BE	b e
+BARR	bar
+ATTIC	attic
+ARTICHOKE	artichoke
+AQUATIC	aquatic
+ANTLERS	antlers
+AMYUM-19	a m yum nineteen
+AMYUM-1	a m yum one
+AMYUM	a m yum
+AMWORRY-1	a m worry one
+AMWORM-1	a m worm one
+AMWORLD	a m world
+AMWOO-1	a m woo one
+AMWHIP-1	a m hip one
+AMWARM	a m warm
+AMWAIL-5	a m wail five
+AMWAIL-1	a m wail one
+AMWAIL	a m wail
+AMUPAS-1	a m upas one
+AMULLA-1	a m ulla one
+AMULAR	a m ular
+AMTURVY-4	a m turvy four
+AMTURVY-13	a m turvy thirteen
+AMTURVY-1	a m turvy one
+AMTURVY	a m turvy
+AMTRUNK-9	a m trunk nine
+AMTRUNK-3	a m trunk three
+AMTRUNK-2	a m trunk two
+AMTRUNK-11	a m trunk eleven
+AMTRUNK-10	a m trunk ten
+AMTRUNK-1	a m trunk one
+AMTRUNK	a m trunk
+AMTRIGON-1	a m trigon one
+AMTORRID	a m torrid
+AMTOAD-1	a m toad one
+AMTIKI-1	a m tiki one
+AMTHUG	a m thug
+AMTHIGH	a m thigh
+AMTAUP-2	a m taup two
+AMTAUP-10	a m taup ten
+AMTAUP-1	a m taup one
+AMTABBY-27	a m tabby twenty seven
+AMTABBY	a m tabby
+AMSWIRL-1	a m swirl one
+AMSWEEP	a m sweep
+AMSUPER-1	a m super one
+AMSTRUT-2	a m strut two
+AMSTRUT	a m strut
+AMSTOKE-1	a m store one
+AMSTET-1	a m stet one
+AMSTALK-1	a m stalk one
+AMSPILL	a m spill
+AMSPICE-1	a m spice one
+AMSPELL	a m spell
+AMSOUR-1	a m sour one
+AMSOUR	a m sour
+AMSLOUCH-1	a m soulch one
+AMSLAW-1	a m slaw one
+AMSIGH-2	a m sigh two
+AMSHALE-1	a m shale one
+AMSEVER-2	a m sever two
+AMSESS-1	a m sess one
+AMSERF-1	a m serf one
+AMSCROLL	a scroll
+AMSANTA	a m santa
+AMSAIL-1	a m sail one
+AMRYE-1	a m rye one
+AMRUNG-1	a m rung one
+AMRUG-5	a m rug five
+AMROD	a m rod
+AMRIPE-3	a m ripe three
+AMRIPE-2	a m ripe two
+AMRIFT-1	a m rift one
+AMRAZZ-1	a m razz one
+AMRASP	am rasp
+AMRANGE	a m range
+AMQUACK	a m quack
+AMPUG-1	a m pug one
+AMPORT	a m port
+AMPOON-1	a m poon one
+AMPATROL-1	a m patrol one
+AMPATROL	a m patrol
+AMPATRIN	a m patrin
+AMPARCH-1	a m parch one
+AMPANIC-7	a m panic seven
+AMPANIC-2	a m panic two
+AMPALP-1	a m palp one
+AMPALM-5	a m palm five
+AMPALM-4	a m palm four
+AMPALM-3	a m palm three
+AMPALM-26	a m palm twenty six
+AMPALM-2	a m palm two
+AMPALM-1	a m palm one
+AMPALM	a m palm
+AMPAL-1	a m pal one
+AMOURETTE-X	a m ooh ret x
+AMOURETTE-B	a m ooh ret b
+AMOURETTE-A	a m ooh ret a
+AMOURETTE-9	a m ooh ret nine
+AMOURETTE-7	a m ooh ret seven
+AMOT-99	a m o t ninety nine
+AMOT-87	a m o t eighty seven
+AMOT-6	a m o t six
+AMOT-31	a m o t thirty one
+AMOT-3	a m o t three
+AMOT-2	a m o t two
+AMOT-119	a m o t one nineteen
+AMOT	a m o t
+AMNORM-1	a m norm one
+AMNIP-1	a m nip one
+AMMUG-1	a m mug one
+AMLUNT-2	a m lunt two
+AMLUNT-1	a m lunt one
+AMLUNCH-1	a m lunch one
+AMLOUT-1	a m lout one
+AMLOON-1	a m loon one
+AMLISP	a m lisp
+AMLILAC	a m lilac
+AMLIGHT-1	a m light one
+AMLEPTON	a m lepton
+AMLEO-3	a m leo three
+AMLEO	a m leo
+AMLEG	a m leg
+AMLAW-3	a m law three
+AMLAW-1	a m law one
+AMLASH-3	a m lash three
+AMLASH-2	a m lash two
+AMLASH	a m lash
+AMLAME-1	a m lame one
+AMLACE-1	a m lace one
+AMKIRK-1	a m kirk one
+AMKHAN-2	a m khan two
+AMJUTE-1	a m jute one
+AMJAVA-4	a m java four
+AMJAG-1	a m jag one
+AMJAG	a m jag
+AMIRON	a m iron
+AMIRE-1	a m ire one
+AMING-4	a m ing four
+AMING-3	a m ing three
+AMIGGY-1	a m iggy one
+AMICE-31	a m ice thirty one
+AMICE-27	a m ice twenty seven
+AMICE-14	a m ice fourteen
+AMICE-1	a m ice one
+AMICE	a m ice
+AMHOBO	a m hobo
+AMHINT-56	a m hint fifty six
+AMHINT-53	a m hint fifty three
+AMHINT-5	a m hint five
+AMHINT-4	a m hint four
+AMHINT-3	a m hint three
+AMHINT-26	a m hint twenty six
+AMHINT-24	a m hint twenty four
+AMHINT-2	a m hint two
+AMHINT-1	a m hint one
+AMHINT	a m hint
+AMHIM-2	a m him two
+AMHIM	a m him
+AMHAZE	a m haze
+AMHAWK-2	a m hawk two
+AMHAWK	a m hawk
+AMHAM-1	a m ham one
+AMHALF-2	a m half two
+AMHALF	a m half
+AMGLEN-1	a m glen one
+AMGABE-1	a m gabe one
+AMFOX-1	a m fox one
+AMFAUNA-1	a m fauna one
+AMFAUNA	a m fauna
+AMFAST	a m fast
+AMEMBER-1	a m ember one
+AMEER-1	a m ear 1
+AMEER	a m ear
+AMECRU-1	a m ecrue one
+AMDOT	a m dot
+AMDOFF-1	a m doff one
+AMDITTO-23	a m ditto twenty three
+AMDIP-3	a m dip three
+AMDIP-2	a m dip two
+AMDIP-1	a m dip one
+AMDESK-1	a m desk one
+AMDENIM-4	a m denim four
+AMDENIM-14	a m denim fourteen
+AMDENIM-11	a m denim eleven
+AMDENIM-1	a m denim one
+AMCROW-1	a m crow one
+AMCROAK-1	a m croak one
+AMCRAG-1	a m crag one
+AMCOVE-1	a m cove one
+AMCOVE	a m cove
+AMCOUP-1	a m coup one
+AMCORE-2	a m core two
+AMCORE-1	a m core one
+AMCORE	a m core
+AMCOOP-1	a m coop one
+AMCOO	a m coo
+AMCONCERT-1	a m concert one
+AMCOG-5	a m cog five
+AMCOG-3	a m cog three
+AMCOG-2	a m cog two
+AMCOG-1	a m cog one
+AMCOG	a m cog
+AMCOBRA	a m cobra
+AMCOAX-1	a m coax one
+AMCLEVE-15	a m cleave fifteen
+AMCLATTER-6	a m clatter six
+AMCLATTER-5	a m clatter five
+AMCLATTER-4	a m clatter four
+AMCLATTER-1	a m clatter one
+AMCIGAR	a m cigar
+AMCHEER-1	a m cheer one
+AMCHEER	a m cheer
+AMCARBON-3	a m carbon three
+AMCARBON-2	a m carbon two
+AMCARBON-1	a m carbon one
+AMCAPE-1	a m cape one
+AMCANOE-9	a m canoe nine
+AMCANOE-7	a m canoe seven
+AMCANOE-3	a m canoe three
+AMCANOE-1	a m canoe one
+AMCANOE	a m canoe
+AMCALL-2	a m call two
+AMCALL-1	a m call one
+AMCALL	a m call
+AMBUD-1	a m bud one
+AMBUD	a m bud
+AMBRUSH	a m brush
+AMBRONC-5	a m bronc five
+AMBRONC-1	a m bronc one
+AMBOAR	a m boar
+AMBLYGON	a m bly gone
+AMBLOOD	a m blood
+AMBLEAK-1	a m bleak one
+AMBLAB-1	a m lab one
+AMBIDDY-1	a m biddy one
+AMBASS-1	a m bass one
+AMBARK-1	a m bark one
+AMBARB	a m barb
+AMBANTY-1	a m banty one
+AMBANTY	a m banty
+AMBANG-5	a m bang five
+AMBANG-4	a m bang four
+AMBANG-3	a m bang three
+AMBANG-2	a m bang two
+AMBANG-1	a m bang one
+AMBANG	a m bang
+AMAPOLA	a m apola
+AMAPACHE-2	a m apache two
+AM	a m
+AEOCEAN-3	a e ocean three
+AEOCEAN	a e ocean
+AEMIQUELET-2	a e mee quill ette two 
+AELADLE	a e ladle
+AEJAMMER	a e jammer
+AEGUSTO	a e gusto
+AEGENERATE	a e generate
+AEFOXTROT	a e foxtrot
+AEDONOR	a e donor
+AEDIPPER-20	ae dipper twenty
+AEDINOSAUR	a e dinosaur
+AEBURBLE	a e burble
+AEBARMAN	a e barman
+AE	a e

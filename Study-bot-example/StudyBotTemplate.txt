@@ -1,0 +1,25 @@
+Bot Secrets: Get this from the Application Settings menu of the Web App deployed for your bot
+"botFilePath": "./<YOUR BOT NAME>.bot",
+"botFileSecret": "<YOUR BOT SECRET>"
+ 
+ QnA Maker From Azure Portal:
+ Key: <Find the key from the Azure Portal when you deploy the QnA Maker Service>
+ Region: <Region you chose when deploying the QnA Maker Service>
+ 
+ QnA Maker Knowledge base IDs:
+ Knowledge base IDs can be found in the URL or in the sample HTTP request after you publish: 
+ example: POST /knowledgebases/<KB ID>/generateAnswer
+ 
+ Knowledge Base IDs: 
+ StudyBiology: "" 
+ StudySociology: "" 
+ StudyGeology: "" 
+ ChitChat: "" 
+ 
+ QnA Maker Endpoint info (same for all KB in a service):
+ Hostname: <Listed in the postman code when you publish your knowledge base>
+ Endpoint Authoring Key: <listed in the postman code when you publish your knowledge base>
+ 
+ Luis Authoring Key:  <Your LUIS authoring key is found in the "Settings" menu when you right click on your account name in the upper right of your luis.ai account>
+ Luis Authoring Region: westus 
+
